@@ -5,7 +5,7 @@
  * Plugin Name:       ZEIT ONLINE Authentication for SSO
  * Plugin URI:        https://github.com/ZeitOnline/zon-authentication
  * Description:       Adds the ability to decode the signed SSO-Cookie
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            ZEIT ONLINE
  * Author URI:        http://www.zeit.de
  * License:           GPL-3.0+
@@ -17,6 +17,7 @@ require_once 'php-jwt/BeforeValidException.php';
 require_once 'php-jwt/ExpiredException.php';
 require_once 'php-jwt/JWT.php';
 require_once 'php-jwt/SignatureInvalidException.php';
+use \Firebase\JWT\JWT;
 
 $z_auth_key = <<<END
 -----BEGIN PUBLIC KEY-----
