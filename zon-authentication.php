@@ -47,7 +47,11 @@ function z_auth_decode_master_cookie() {
 		try {
 			$userData = JWT::decode($_COOKIE[ 'zeit_sso_201501' ], $GLOBALS['z_auth_key']);
 		}
-		catch (Exception $e) {
+		catch (UnexpectedValueException $e) {
+			var_dump($e->getMessage());
+		}
+		catch (DomainException $e) {
+			var_dump($e->getMessage());
 		}
 	}
 
